@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Griffy&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    min-height: 100%;
+    background: linear-gradient(orange, yellow)
+}
+
+.rightImg{
+    position: fixed;
+    width: auto;
+    height: 100%;
+    right: 1%;
+    top: 1%;
+}
+
+.leftImg{
+    position: fixed;
+    width: auto;
+    height: 100%;
+    left: 1%;
+    top: 1%;
+}
+
+h1{
+    margin: 10px 50px;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 2000;
+    color: firebrick;
+    font-family: 'Great Vibes', 'Sans-Serif';
+}
+
+.gif{
+    width: 120px;
+    height: 120px;
+}
+
+.gif-container{
+    text-align: center;
+    margin: 10px 50px;
+}
+
+.aus-container{
+    text-align: center;
+    margin: 10px 30px;
+}
+
+.swa{
+    height: 50px;
+    width: 50px;
+}
+
+.om{
+    height: 50px;
+    width: 50px;
+}
+
+.aus-1{
+    padding-right: 20px;
+}
+
+.aus-2{
+    padding-right: 20px;
+}
+
+.aus-3{
+    padding-right: 20px;
+}
+
+#timer{
+    margin: 20px 50px;
+    font-weight: bolder;
+    font-size: 2rem;
+    font-family: 'Griffy', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: blue;
+    text-align: center;
+}
+
+.slideshow{
+    width:230px;
+    height:230px;
+    background-image: url("images/sld1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation:sldshow 20s infinite linear;
+    margin: 20px auto;
+}
+@keyframes sldshow{
+    5%{background-image: url("images/sld1.jpg");}
+    25%{background-image: url("images/sld2.jpg");}
+    30%{background-image: url("images/sld2.jpg");}
+    50%{background-image: url("images/sld3.jpg");}
+    55%{background-image: url("images/sld3.jpg");}
+    75%{background-image: url("images/sld4.jpg");}
+    80%{background-image: url("images/sld4.jpg");}
+    100%{background-image: url("images/sld1.jpg");}
+}
+
+.gr-icon{
+    height: 50px;
+    width: 50px;
+    padding: 0 10px;
+}
+
+.greet{
+    text-align: center;
+}
+
+#intro{
+    position: fixed;
+    left: 30px;
+    top: 150px;
+    height: 300px;
+    width: 300px;
+}

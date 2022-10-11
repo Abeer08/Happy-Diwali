@@ -67,11 +67,11 @@ function diwaliTimer(){
 setInterval(diwaliTimer, 1000);
 
 function textGreet(){
-    if (params.has('n') == true){
-    var url = `https://wa.me/?text=Hello ${client} have sent you a greeting, click ${window.location.href.replace(`n=${getParams('n')}`, '')}=${client} to visit.`;
+    if ((params.get('n') != null) || (params.get('n') != undefined)){
+    var url = `https://wa.me/?text=Hello+${client}+have+sent+you+a+greeting,+click+${window.location.href.replace(`n=${params.get('n')}`, '')}=${client}+to+visit.`;
     }
     else{
-    var url = `https://wa.me/?text=Hello ${client} have sent you a greeting, click ${window.location.href}?n=${client} to visit.`;
+    var url = `https://wa.me/?text=Hello,+I+have+sent+you+a+greeting,+click+${window.location.href}+to+visit.`;
     }
     window.open(url, '_blank')
 }

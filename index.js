@@ -68,10 +68,10 @@ setInterval(diwaliTimer, 1000);
 
 function textGreet(){
     if (params.has('n') == true){
-        var url = `https://wa.me/?text=Hello ${client_name} have sent you a greeting, click ${window.location.href.replace(`n=${params.get('n')}`, '')}=${client_name} to visit.`;
+        var url = `https://wa.me/?text=Hello+${client_name}+have+sent+you+a+greeting,+click+${window.location.href.replace(`n=${params.get('n')}`, '')}=${client_name}+to+visit.`;
         }
         else{
-        var url = `https://wa.me/?text=Hello ${client_name} have sent you a greeting, click ${window.location.href}?n=${client_name} to visit.`;
+        var url = `https://wa.me/?text=Hello+${client_name}+have+sent+you+a+greeting,+click+${window.location.href}?n=${client_name}+to+visit.`;
         }
         window.open(url, '_blank')
 }

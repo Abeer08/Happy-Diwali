@@ -67,13 +67,13 @@ function diwaliTimer(){
 setInterval(diwaliTimer, 1000);
 
 function textGreet(){
-    if ((params.get('n') != null) || (params.get('n') != undefined)){
-    var url = `https://wa.me/?text=Hello+${client}+have+sent+you+a+greeting,+click+${window.location.href.replace(`n=${params.get('n')}`, '')}=${client}+to+visit.`;
-    }
-    else{
-    var url = `https://wa.me/?text=Hello,+I+have+sent+you+a+greeting,+click+${window.location.href}+to+visit.`;
-    }
-    window.open(url, '_blank')
+    if (params.has('n') == true){
+        var url = `https://wa.me/?text=Hello ${client_name} have sent you a greeting, click ${window.location.href.replace(`n=${params.get('n')}`, '')}=${client_name} to visit.`;
+        }
+        else{
+        var url = `https://wa.me/?text=Hello ${client_name} have sent you a greeting, click ${window.location.href}?n=${client_name} to visit.`;
+        }
+        window.open(url, '_blank')
 }
 
 function emailGreet(){

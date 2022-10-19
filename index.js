@@ -71,19 +71,19 @@ function textGreet(){
         var url = `https://wa.me/?text=Hello ${client_name} have sent you a greeting, click ${window.location.href.replace(`n=${params.get('n')}`, '').slice(0, -1)}?n=${client_name} to visit.`;;
         }
     else if(client_name.length == 0){
-        var url = `https://wa.me/?text=Hello,%20I%20have%20sent%20you%20a%20greeting,%20click%20${window.location.href.replace(`n=${params.get('n')}`, '')}%20to%20visit.`;
+        var url = `https://wa.me/?text=Hello,%20I%20have%20sent%20you%20a%20greeting,%20click%20${window.location.href.replace(`n=${params.get('n')}`, '').slice(0, -1)}%20to%20visit.`;
         }
         window.open(url, '_blank')
 }
 
 function emailGreet(){
     const subject = 'Happy Diwali';
-    var body = `Hello ${client} have sent you a greeting, go to ${window.location.href}?n=${client} to visit.`;
+    var body = `Hello ${client} have sent you a greeting, go to ${window.location.href.replace(`n=${params.get('n')}`, '').slice(0, -1)}?n=${client} to visit.`;
     window.open(`mailto:?subject=${subject}&body=${body}`, '_blank')
 }
 
 function copyURL(){
-    let current_url = window.location.href
+    let current_url = window.location.href.replace(`n=${params.get('n')}`, '').slice(0, -1)
     navigator.clipboard.writeText(current_url);
     alert('URL Copied!')
 }

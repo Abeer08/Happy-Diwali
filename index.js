@@ -24,7 +24,7 @@ if (client.length == 0){
 }
 
 function diwaliTimer(){
-    var date = new Date("Oct 24, 2022 00:00:00").getTime();
+    var date = new Date("Nov 12, 2023 00:00:00").getTime();
     var now = new Date().getTime();
     timeleft = date - now;
 

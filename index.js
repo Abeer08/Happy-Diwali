@@ -19,7 +19,7 @@ if (client.length == 0){
     if (params.get('n')!=null){
     document.getElementsByTagName('h1')[0].textContent = `Happy Diwali to ${client} from ${params.get('n')}. Press on Screen!`
     }else{
-    document.getElementsByTagName('h1')[0].textContent = `Happy Diwali from me to ${client}. Press on Screen!`
+    document.getElementsByTagName('h1')[0].textContent = `Happy Diwali to ${client} from me. Press on Screen!`
     }
 }
 
